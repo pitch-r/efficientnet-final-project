@@ -11,7 +11,7 @@ EfficientNet is a convolutional neural network architecture designed to achieve 
 ## Private Investigator
 
 
-|              Mingxing Tan             |    Quoc V. Le   |
+|  <div style="width:380px">Mingxing Tan</div>  |    Quoc V. Le   |
 |:--------------------------------------|:------------------|
 | <img src="img/1582087891427.jpg" width="364px"/>|<img src="img/FNf9dH5N_400x400.png" width="368px"/>|
 | Staff Software Engineer at Google Brain [[1]](#ref1)    |Research Scientist at Google Brain|
@@ -31,7 +31,9 @@ Mingxing Tan received his PhD from Peking University. He was a postdoctoral rese
 
 ### Context in the Timeline:
 
+{:refdef: style="text-align: center;"}
 ![cnn_timline1](/img/0_1SDlsJ7snNv_deec.webp) [[4]](#ref4)
+{: refdef}
 
 -   EfficientNet fits into the broader context of the evolution of image classification models, particularly in the race to achieve better efficiency without compromising accuracy. It builds upon the advancements of notable models such as AlexNet (2012), ResNet (2016), and MobileNetV2 (2018).
 
@@ -62,11 +64,15 @@ It happens with the two techniques explored in this paper compound scalling and 
 
 Before EfficientNets, ConvNets were typically scaled up by increasing only one dimension - depth, width or image resolution. EfficientNets introduced a compound scaling approach that uniformly scales all three dimensions - depth, width and input resolution - using fixed ratios to balance between them. This allows the network to capture more fine-grained patterns as the input image gets bigger. Compound scaling sets EfficientNets apart from prior works and performs better than arbitrary scaling, as seen in results on MobileNets and ResNets in the figure below. Intuitively, bigger input size needs more layers and channels to capture details. So compound scaling works by scaling up depth, width and resolution together in a principled way.
 
+{:refdef: style="text-align: center;"}
 ![fig2](img/fig2.png)
+{: refdef}
 
 The experiments with compound scaling reveal an important insight - balancing all dimensions is key for maximizing accuracy under computational constraints. As the figure shows below, the highest gains come from increasing depth, input resolution and width together. When resolution is higher at 299x299 (r=1.3) versus 224x224 (r=1.0), scaling width leads to much greater accuracy improvement on a deeper base network (d=2.0), for the same FLOPS cost. Simply put, pushing only one dimension hits a scaling limit. With a bigger input image, more layers are needed to process the additional detail, and more channels to capture the richer patterns. The authors succinctly state it as: "In order to pursue better accuracy and efficiency, it is critical to balance all dimensions of network width, depth, and resolution during ConvNet scaling."
 
+{:refdef: style="text-align: center;"}
 ![fig3](img/fig3.png)
+{: refdef}
 
 ## Neural Architecture Search (NAS)
 
@@ -74,17 +80,23 @@ The authors went beyond simply applying compound scaling to existing architectur
 
 ### MnasNet Approach
 
+{:refdef: style="text-align: center;"}
 ![Alt text](img/image.png) [[3]](#ref3)
+{: refdef}
 
 Mnasnet utilizes both model accuracy and latency as an objective function while constrainting an overly large latency. The pipeline allows the controller to defines multiple blocks of neural networks containing different hyper-parameters. Then a method based on reinforcement learning is employed to discover model architectures that effectively optimize the given objective function. In each iteration, the controller initiates the process by generating a set of models, sampling them through its RNN network by predicting a sequence of tokens.
 
+{:refdef: style="text-align: center;"}
 ![obj_fn1](img/1_9jAnu8aB9SuZj_ty0RBqHg.webp)
+{: refdef}
 
 ### Neural Architecture Search for EfficientNets
 
 A similar approach to MnasNet has been used to create EfficientNet-B0. While MnasNet uses actual latency measured from a mobile device, as the network does not bound to one hardware, EfficientNet uses FLOPS instead. The pipeline does the same processes as MnasNet with an objective function to maximize $ACC(m) \times [FLOP(m)/T]^w$.
 
+{:refdef: style="text-align: center;"}
 ![Alt text](img/image3.png)
+{: refdef}
 
 where $w,d,r$ are coefficients for scaling network width, depth, and resolution. $\hat{F}, \hat{L}, \hat{H},\hat{W} ,\hat{C}$ are predefined parameters in baseline network.
 
