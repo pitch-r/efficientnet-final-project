@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<div style="text-align:center"> ![EfficientNet-B0](img/image2.png) </div>
+<div style="text-align:center"> <img src="img/image2.png"/> </div>
+
+<p></p>
 
 EfficientNet is a convolutional neural network architecture designed to achieve state-of-the-art performance while minimizing computational resources. The paper introduces a compound scaling method to balance model depth, width, and resolution, enabling efficient scaling for convolution networks. By optimizing the trade-off between model size and accuracy, the network was constructed based on a mobile-size baseline while still achieving higher performance with significantly fewer parameters.
 
@@ -11,7 +13,7 @@ EfficientNet is a convolutional neural network architecture designed to achieve 
 
 |              Mingxing Tan             |    Quoc V. Le   |
 |:--------------------------------------|:------------------|
-| ![Mingxing Tan](img/1582087891427.jpg)|![Quoc V. Le](img/FNf9dH5N_400x400.png)|
+| <img src="img/1582087891427.jpg" width="364px"/>|<img src="img/FNf9dH5N_400x400.png" width="368px"/>|
 | Staff Software Engineer at Google Brain [[1]](#ref1)    |Research Scientist at Google Brain|
 | Postdoc at Cornell University|PhD at Standford|
 | PhD at Peking University|Bachelor’s degree in Computer Science at The Australian National University|
@@ -120,7 +122,9 @@ On the positive side, the mobile-sized baseline requirements and streamlined par
 
 The negative impacts of these advancements are manifold. First is the concern of inaccuracy, mainly when humans heavily rely on the outcomes of these models, particularly in sensitive fields like healthcare. Furthermore, legal consent becomes a critical issue, extending beyond widely used public datasets like ImageNet. Addressing legal intricacies seems imperative before such applications are widely deployed and used. Additionally, concerns surrounding fraud, bias, and ethical consent further underscore the intricate moral landscape accompanying the rapid evolution of mobile computer vision.
 
+{:refdef: style="text-align: center;"}
 ![Alt text](img/image4.png)
+{: refdef}
 
 ## Review by Pichaya Saittagaroon
 ### Overall:
