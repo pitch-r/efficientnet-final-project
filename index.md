@@ -10,14 +10,36 @@ EfficientNet is a convolutional neural network architecture designed to achieve 
 
 ## Private Investigator
 
-
-|  <div style="width:380px">Mingxing Tan</div>  |    Quoc V. Le   |
-|:--------------------------------------|:------------------|
-| <img src="img/1582087891427.jpg" width="364px"/>|<img src="img/FNf9dH5N_400x400.png" width="368px"/>|
-| Staff Software Engineer at Google Brain [[1]](#ref1)    |Research Scientist at Google Brain|
-| Postdoc at Cornell University|PhD at Standford|
-| PhD at Peking University|Bachelor’s degree in Computer Science at The Australian National University|
-||Was a researcher at NICTA and Max Planck Institute|
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left" width="400px"><center>Mingxing Tan</center></th>
+      <th style="text-align: left" width="400px"><center>Quoc V. Le</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><img src="img/1582087891427.jpg" width="364px"></td>
+      <td style="text-align: left"><img src="img/FNf9dH5N_400x400.png" width="368px"></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Staff Software Engineer at Google Brain <a href="#ref1">[1]</a></td>
+      <td style="text-align: left">Research Scientist at Google Brain</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Postdoc at Cornell University</td>
+      <td style="text-align: left">PhD at Standford</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PhD at Peking University</td>
+      <td style="text-align: left">Bachelor’s degree in Computer Science at The Australian National University</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">&nbsp;</td>
+      <td style="text-align: left">Was a researcher at NICTA and Max Planck Institute</td>
+    </tr>
+  </tbody>
+</table>
 
 The paper's two authors were at Google Brain at the time of the publication.
 
@@ -51,7 +73,9 @@ Mingxing Tan received his PhD from Peking University. He was a postdoctoral rese
 ## Visual Explaination (Digrammer section)
 In this section we see a graph showing the accuracy to parameter plot of various model when compared to the EfficientNet models B0-B7
 
+{:refdef: style="text-align: center;"}
 ![fig1](img/fig1.png)
+{: refdef}
 
 The graph above are the results of running the model of the ImageNet datasets, where we see that EfficientNet outperforms all the other model even after having significatly lower number of parameters than all the other models. In case of EfficientNet-B7 achieved new state of art with 84.4% top-1 accuracy outperforming the previous SOTA GPipe but being 8.4 times smaller and 6.1 times faster.
 
