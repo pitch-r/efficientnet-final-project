@@ -104,23 +104,23 @@ Negative impact/issues raised by the advancement of Image Recognition for exampl
 
 ## Review by Pichaya Saittagaroon
 ### Overall:
-  8: Strong Accept. High-impact paper, with no major concerns with respect to evaluation, resources, reproducibility, or ethical considerations.
+8: Strong Accept. High-impact paper, with no major concerns with respect to evaluation, resources, reproducibility, or ethical considerations.
  
 ### Strengths and Weaknesses: 
--   	Originality: The idea of scaling law and network resource optimization is not novel. However, the proposed scaling law and network combination show interesting findings and achieve high accuracy and performance. The related works are cited adequately.
--   	Quality: The experiment results are well supported with widely known benchmarks. The paper may need to provide more details on how the network is constructed. The author should also have mentioned the evaluation of their work.
--   	Clarity: The paper was well written, stating the background of the problem with easy-to-understand language. Previous works were introduced well and were easy to follow.
--   	Significance: The finding results were intriguing. The network achieved high accuracy in many datasets. It also introduces the concept of using the network’s width, depth, and resolution together to scale.
+-   Originality: The idea of scaling law and network resource optimization is not novel. However, the proposed scaling law and network combination show interesting findings and achieve high accuracy and performance. The related works are cited adequately.
+-   Quality: The experiment results are well supported with widely known benchmarks. The paper may need to provide more details on how the network is constructed. The author should also have mentioned the evaluation of their work.
+-   Clarity: The paper was well written, stating the background of the problem with easy-to-understand language. Previous works were introduced well and were easy to follow.
+-   Significance: The finding results were intriguing. The network achieved high accuracy in many datasets. It also introduces the concept of using the network’s width, depth, and resolution together to scale.
 
 ## Review by Ashwin Sharan
 ### Overall:  
-    Technically strong paper with, with novel ideas, excellent impact on the field of computer vision in terms of classification, with excellent evaluation, resources, and reproducibility, and no unaddressed ethical considerations. (Score 8/10)
+Technically strong paper with, with novel ideas, excellent impact on the field of computer vision in terms of classification, with excellent evaluation, resources, and reproducibility, and no unaddressed ethical considerations. (Score 8/10)
 
 ### Strengths and Weaknesses: 
--   	Originality: The idea may not be completely novel as it tries to combine the findings of previous papers where scaling width, depth and resolution can help improve the model. But it is novel in its approach of combining all three to find a ratio that works best.
--   	Quality: The results of the experiments are well explained and are reproducible, It has significant data showing the improvements in the model due to its approach.
--   	Clarity: The mixed scaling approach is empirically motivated and there is no theoretical justification for the specific scaling factors used. But the paper provide significant exploration of different datasets 
--   	Significance: EfficientNet is significantly more efficient than previous models, using fewer parameters and FLOPs. It achieves state-of-the-art accuracy on several image classification benchmarks.
+-   Originality: The idea may not be completely novel as it tries to combine the findings of previous papers where scaling width, depth and resolution can help improve the model. But it is novel in its approach of combining all three to find a ratio that works best.
+- 	Quality: The results of the experiments are well explained and are reproducible, It has significant data showing the improvements in the model due to its approach.
+- 	Clarity: The mixed scaling approach is empirically motivated and there is no theoretical justification for the specific scaling factors used. But the paper provide significant exploration of different datasets 
+-   Significance: EfficientNet is significantly more efficient than previous models, using fewer parameters and FLOPs. It achieves state-of-the-art accuracy on several image classification benchmarks.
 
 
 
