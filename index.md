@@ -76,7 +76,7 @@ Mingxing Tan received his PhD from Peking University. He was a postdoctoral rese
 In this section we see a graph showing the accuracy to parameter plot of various model when compared to the EfficientNet models B0-B7
 
 {:refdef: style="text-align: center;"}
-![fig1](img/fig1.png)
+![fig1](img/fig1.png)[[0]](#ref2)
 {: refdef}
 
 The graph above are the results of running the model of the ImageNet datasets, where we see that EfficientNet outperforms all the other model even after having significatly lower number of parameters than all the other models. In case of EfficientNet-B7 achieved new state of art with 84.4% top-1 accuracy outperforming the previous SOTA GPipe but being 8.4 times smaller and 6.1 times faster.
@@ -91,13 +91,13 @@ It happens with the two techniques explored in this paper compound scalling and 
 Before EfficientNets, ConvNets were typically scaled up by increasing only one dimension - depth, width or image resolution. EfficientNets introduced a compound scaling approach that uniformly scales all three dimensions - depth, width and input resolution - using fixed ratios to balance between them. This allows the network to capture more fine-grained patterns as the input image gets bigger. Compound scaling sets EfficientNets apart from prior works and performs better than arbitrary scaling, as seen in results on MobileNets and ResNets in the figure below. Intuitively, bigger input size needs more layers and channels to capture details. So compound scaling works by scaling up depth, width and resolution together in a principled way.
 
 {:refdef: style="text-align: center;"}
-![fig2](img/fig2.png)
+![fig2](img/fig2.png)[[0]](#ref2)
 {: refdef}
 
 The experiments with compound scaling reveal an important insight - balancing all dimensions is key for maximizing accuracy under computational constraints. As the figure shows below, the highest gains come from increasing depth, input resolution and width together. When resolution is higher at 299x299 (r=1.3) versus 224x224 (r=1.0), scaling width leads to much greater accuracy improvement on a deeper base network (d=2.0), for the same FLOPS cost. Simply put, pushing only one dimension hits a scaling limit. With a bigger input image, more layers are needed to process the additional detail, and more channels to capture the richer patterns. The authors succinctly state it as: "In order to pursue better accuracy and efficiency, it is critical to balance all dimensions of network width, depth, and resolution during ConvNet scaling."
 
 {:refdef: style="text-align: center;"}
-![fig3](img/fig3.png)
+![fig3](img/fig3.png)[[0]](#ref2)
 {: refdef}
 
 ## Neural Architecture Search (NAS)
@@ -121,14 +121,24 @@ Mnasnet utilizes both model accuracy and latency as an objective function while 
 A similar approach to MnasNet has been used to create EfficientNet-B0. While MnasNet uses actual latency measured from a mobile device, as the network does not bound to one hardware, EfficientNet uses FLOPS instead. The pipeline does the same processes as MnasNet with an objective function to maximize $ACC(m) \times [FLOP(m)/T]^w$.
 
 {:refdef: style="text-align: center;"}
-![Alt text](img/image3.png)
+![Alt text](img/image3.png)[[0]](#ref2)
 {: refdef}
 
 where $w,d,r$ are coefficients for scaling network width, depth, and resolution. $\hat{F}, \hat{L}, \hat{H},\hat{W} ,\hat{C}$ are predefined parameters in baseline network.
 
 ## Scaling Efficient-B0 to get B1-B7
+Now that we undestand how the EfficientNet Architecture makes use of compound scaling and the NAS architecture, In this scetion we look at how the author scaled Efficient-B0 to get B1-B7.
 
-!TODO
+{:refdef: style="text-align: center;"}
+![Alt text](img/fig4.png)[[0]](#ref2)
+{: refdef}
+
+The author defines the above values as shown, also where φ is a user-defined coeffecient that determines how much extra resources are available. Where the α, β, γ can be determined using a small grid search and thus we can scale networks depth, width and input resolution to get a bigger network.
+
+As mentioed in the paper: 
+Starting from the baseline EfficientNet-B0, we apply our compound scaling method to scale it up with two steps[[0]](#ref2): 
+- STEP 1: we first fix φ = 1, assuming twice more resources available, and do a small grid search of α, β, γ. In particular, we find the best values for EfficientNet-B0 are α = 1.2, β = 1.1, γ = 1.15, under constraint of α * β2 * γ2 ≈ 2.[[0]](#ref2)
+- STEP 2: we then fix α, β, γ as constants and scale up baseline network with different φ, to obtain EfficientNet-B1 to B7.[[0]](#ref2)
 
 ## Social Impact
 
@@ -144,7 +154,7 @@ The negative impacts of these advancements are manifold. First is the concern of
 
 ## Industrial Applications
 
-![AR Monocle](img/IA.png)
+![AR Monocle](img/IA.png)[[5]](#ref5)
 
 -   Computer vision applications: EfficientNet models have become very popular as pre-trained models for transfer learning in computer vision tasks like image classification, object detection, segmentation, and more. Their efficiency makes them well-suited for deployment in applications.
 
@@ -197,6 +207,8 @@ Technically strong paper with, with novel ideas, excellent impact on the field o
 [3] MnasNet: Towards Automating the Design of Mobile Machine Learning Models <a name="ref2">https://blog.research.google/2018/08/mnasnet-towards-automating-design-of.html</a>
 
 [4] Wrapping Up CNN Models: Shifting Focus to Attention-Based Architectures https://blog.gopenai.com/wrapping-up-cnn-models-shifting-focus-to-attention-based-architectures-5029b87034d9
+
+[5] Image of AR monocle, https://i.redd.it/h4xwqzlwemo91.png
 
 ## Team Member
 - Ashwin Sharan
