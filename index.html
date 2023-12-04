@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>EfficientNet | Rethinking Model Scaling for Convolutional Neural Networks</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="EfficientNet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Rethinking Model Scaling for Convolutional Neural Networks" />
+<meta property="og:description" content="Rethinking Model Scaling for Convolutional Neural Networks" />
+<link rel="canonical" href="https://pitch-r.github.io/efficientnet-final-project/" />
+<meta property="og:url" content="https://pitch-r.github.io/efficientnet-final-project/" />
+<meta property="og:site_name" content="EfficientNet" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="EfficientNet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Rethinking Model Scaling for Convolutional Neural Networks","headline":"EfficientNet","name":"EfficientNet","url":"https://pitch-r.github.io/efficientnet-final-project/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/efficientnet-final-project/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">EfficientNet</h1>
+      <h2 class="project-tagline">Rethinking Model Scaling for Convolutional Neural Networks</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <div style="text-align:center"> <img src="img/image2.png" /> </div>
+
+<p></p>
+
+<p>EfficientNet is a convolutional neural network architecture designed to achieve state-of-the-art performance while minimizing computational resources. The paper introduces a compound scaling method to balance model depth, width, and resolution, enabling efficient scaling for convolution networks. By optimizing the trade-off between model size and accuracy, the network was constructed based on a mobile-size baseline while still achieving higher performance with significantly fewer parameters.</p>
+
+<p>EfficientNet marked a significant breakthrough in computer vision and deep learning as the model to attain state-of-the-art performance across various image classification benchmarks. It outperformed its predecessors in computational efficiency, amplifying its impact on the field. Since its introduction, EfficientNet has been widely adopted in numerous real-world applications.</p>
+
+<h2 id="literature-review">Literature Review</h2>
+
+<h3 id="authors-and-publication-date">Authors and Publication Date:</h3>
+
+<ul>
+  <li>The EfficientNet paper, titled “EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks,” was indeed published in 2019 by Mingxing Tan and Quoc V. Le from Google.</li>
+</ul>
+
+<h3 id="context-in-the-timeline">Context in the Timeline:</h3>
+
+<p style="text-align: center;"><img src="img/0_1SDlsJ7snNv_deec.webp" alt="cnn_timline1" /> <a href="#ref4">[4]</a></p>
+
+<ul>
+  <li>EfficientNet fits into the broader context of the evolution of image classification models, particularly in the race to achieve better efficiency without compromising accuracy. It builds upon the advancements of notable models such as AlexNet (2012), ResNet (2016), and MobileNetV2 (2018).</li>
+</ul>
+
+<h3 id="scaling-strategies">Scaling Strategies:</h3>
+
+<ul>
+  <li>The paper introduces a novel approach to scaling Convolutional Neural Networks (ConvNets) by simultaneously scaling the network’s depth, width, and resolution. This is in contrast to previous methods that focused on scaling only one of these dimensions. The three scaling dimensions are inspired by earlier works: depth scaling (He et al., 2016), width scaling (Zagoruyko &amp; Komodakis, 2016), and resolution scaling (Huang et al., 2018).</li>
+</ul>
+
+<h3 id="grid-search-for-efficient-scaling">Grid Search for Efficient Scaling:</h3>
+
+<ul>
+  <li>EfficientNet utilizes a grid search technique to efficiently tune the scaling coefficients for depth, width, and resolution. This process aims to find an optimal balance that maximizes performance while minimizing computational and memory overhead. This is a critical aspect of the model, as it addresses the challenge posed by the scaling law.</li>
+</ul>
+
+<h3 id="advantages-of-efficient-scaling">Advantages of Efficient Scaling:</h3>
+<ul>
+  <li>The EfficientNet model stands out for achieving superior performance with similar computational costs. Through a grid search for tuning, it identifies a scaling strategy that is faster, more parameter-efficient, and less memory-intensive, making significant strides in neural network efficiency.</li>
+</ul>
+
+<h2 id="biography">Biography</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left" width="400px"><center>Mingxing Tan</center></th>
+      <th style="text-align: left" width="400px"><center>Quoc V. Le</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><img src="img/1582087891427.jpg" width="364px" /></td>
+      <td style="text-align: left"><img src="img/FNf9dH5N_400x400.png" width="368px" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Staff Software Engineer at Google Brain <a href="#ref1">[1]</a></td>
+      <td style="text-align: left">Research Scientist at Google Brain</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Postdoc at Cornell University</td>
+      <td style="text-align: left">PhD at Standford</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PhD at Peking University</td>
+      <td style="text-align: left">Bachelor’s degree in Computer Science at The Australian National University</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">&nbsp;</td>
+      <td style="text-align: left">Was a researcher at NICTA and Max Planck Institute</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The paper’s two authors were at Google Brain at the time of the publication.</p>
+
+<p>Mingxing Tan received his PhD from Peking University. He was a postdoctoral researcher at Cornell University. Quoc V. Le finished his Bachelor’s in Computer Science at The Australian National University and his PhD at Sandford <a href="#ref2">[2]</a>. Le also worked as a researcher at NICTA and Max Planck Institute previously.</p>
+
+<h2 id="visual-explaination-digrammer-section">Visual Explaination (Digrammer section)</h2>
+<p>In this section we see a graph showing the accuracy to parameter plot of various model when compared to the EfficientNet models B0-B7</p>
+
+<p style="text-align: center;"><img src="img/fig1.png" alt="fig1" /><a href="#ref2">[0]</a></p>
+
+<p>The graph above are the results of running the model of the ImageNet datasets, where we see that EfficientNet outperforms all the other model even after having significatly lower number of parameters than all the other models. In case of EfficientNet-B7 achieved new state of art with 84.4% top-1 accuracy outperforming the previous SOTA GPipe but being 8.4 times smaller and 6.1 times faster.</p>
+
+<h3 id="how-does-this-happen">How does this happen?</h3>
+<p>It happens with the two techniques explored in this paper compound scalling and neural architecture search</p>
+
+<h2 id="rethinking-model-scaling-for-convolutional-neural-networks">Rethinking Model Scaling for Convolutional Neural Networks</h2>
+
+<h3 id="compound-scaling">Compound Scaling</h3>
+
+<p>Before EfficientNets, ConvNets were typically scaled up by increasing only one dimension - depth, width or image resolution. EfficientNets introduced a compound scaling approach that uniformly scales all three dimensions - depth, width and input resolution - using fixed ratios to balance between them. This allows the network to capture more fine-grained patterns as the input image gets bigger. Compound scaling sets EfficientNets apart from prior works and performs better than arbitrary scaling, as seen in results on MobileNets and ResNets in the figure below. Intuitively, bigger input size needs more layers and channels to capture details. So compound scaling works by scaling up depth, width and resolution together in a principled way.</p>
+
+<p style="text-align: center;"><img src="img/fig2.png" alt="fig2" /><a href="#ref2">[0]</a></p>
+
+<p>The experiments with compound scaling reveal an important insight - balancing all dimensions is key for maximizing accuracy under computational constraints. As the figure shows below, the highest gains come from increasing depth, input resolution and width together. When resolution is higher at 299x299 (r=1.3) versus 224x224 (r=1.0), scaling width leads to much greater accuracy improvement on a deeper base network (d=2.0), for the same FLOPS cost. Simply put, pushing only one dimension hits a scaling limit. With a bigger input image, more layers are needed to process the additional detail, and more channels to capture the richer patterns. The authors succinctly state it as: “In order to pursue better accuracy and efficiency, it is critical to balance all dimensions of network width, depth, and resolution during ConvNet scaling.”</p>
+
+<p style="text-align: center;"><img src="img/fig3.png" alt="fig3" /><a href="#ref2">[0]</a></p>
+
+<h2 id="neural-architecture-search-nas">Neural Architecture Search (NAS)</h2>
+
+<p>The authors went beyond simply applying compound scaling to existing architectures. They recognized that developing a new baseline model, optimized specifically for mobile applications, would better showcase the power of compound scaling. This led them to create the EfficientNet architecture using neural architecture search - identifying an efficient baseline model tailored for mobile devices rather than arbitrarily picking an off-the-shelf ConvNet. Starting from this specialized foundation allowed them to scale up EfficientNet most effectively. Neural Architecture Search (NAS) is an automated process to design neural network architectures. It iterates over the space of possible architectures, training child models and using their performance as a signal to guide the search towards increasingly better designs specialized for the problem at hand.</p>
+
+<h3 id="mnasnet-approach">MnasNet Approach</h3>
+
+<p style="text-align: center;"><img src="img/image.png" alt="Alt text" /> <a href="#ref3">[3]</a></p>
+
+<p>Mnasnet utilizes both model accuracy and latency as an objective function while constrainting an overly large latency. The pipeline allows the controller to defines multiple blocks of neural networks containing different hyper-parameters. Then a method based on reinforcement learning is employed to discover model architectures that effectively optimize the given objective function. In each iteration, the controller initiates the process by generating a set of models, sampling them through its RNN network by predicting a sequence of tokens.</p>
+
+<p style="text-align: center;"><img src="img/1_9jAnu8aB9SuZj_ty0RBqHg.webp" alt="obj_fn1" /></p>
+
+<h3 id="neural-architecture-search-for-efficientnets">Neural Architecture Search for EfficientNets</h3>
+
+<p>A similar approach to MnasNet has been used to create EfficientNet-B0. While MnasNet uses actual latency measured from a mobile device, as the network does not bound to one hardware, EfficientNet uses FLOPS instead. The pipeline does the same processes as MnasNet with an objective function to maximize ACC(m) x [FLOP(m)/T]^w</p>
+
+<p style="text-align: center;"><img src="img/image3.png" alt="Alt text" /><a href="#ref2">[0]</a></p>
+
+<p>where w,d,r are coefficients for scaling network width, depth, and resolution. F^, L^, H^, W^ and C^ are predefined parameters in baseline network.</p>
+
+<h2 id="scaling-efficient-b0-to-get-b1-b7">Scaling Efficient-B0 to get B1-B7</h2>
+<p>Now that we undestand how the EfficientNet Architecture makes use of compound scaling and the NAS architecture, In this scetion we look at how the author scaled Efficient-B0 to get B1-B7.</p>
+
+<p style="text-align: center;"><img src="img/fig4.png" alt="Alt text" /><a href="#ref2">[0]</a></p>
+
+<p>The author defines the above values as shown, also where φ is a user-defined coeffecient that determines how much extra resources are available. Where the α, β, γ can be determined using a small grid search and thus we can scale networks depth, width and input resolution to get a bigger network.</p>
+
+<p>As mentioed in the paper: 
+Starting from the baseline EfficientNet-B0, we apply our compound scaling method to scale it up with two steps<a href="#ref2">[0]</a>:</p>
+<ul>
+  <li>STEP 1: we first fix φ = 1, assuming twice more resources available, and do a small grid search of α, β, γ. In particular, we find the best values for EfficientNet-B0 are α = 1.2, β = 1.1, γ = 1.15, under constraint of α * β2 * γ2 ≈ 2.<a href="#ref2">[0]</a></li>
+  <li>STEP 2: we then fix α, β, γ as constants and scale up baseline network with different φ, to obtain EfficientNet-B1 to B7.<a href="#ref2">[0]</a></li>
+</ul>
+
+<h2 id="social-impact">Social Impact</h2>
+
+<p>EfficientNet is considered a small network suitable for embedding in mobile devices. As in the current smartphone era, integrating mobile computer vision has become pervasive, fundamentally reshaping the mobile phone market with a strong emphasis on AI and ML. EficientNet and all mobile computer vision technologies bring us two-sided impacts.</p>
+
+<p>On the positive side, the mobile-sized baseline requirements and streamlined parameters in network construction enhance widespread accessibility and resource efficiency. It facilitates the deployment of AI applications across a diverse array of mobile devices, fostering an upsurge in the prevalence and accessibility of mobile-based AI applications.</p>
+
+<p>The negative impacts of these advancements are manifold. First is the concern of inaccuracy, mainly when humans heavily rely on the outcomes of these models, particularly in sensitive fields like healthcare. Furthermore, legal consent becomes a critical issue, extending beyond widely used public datasets like ImageNet. Addressing legal intricacies seems imperative before such applications are widely deployed and used. Additionally, concerns surrounding fraud, bias, and ethical consent further underscore the intricate moral landscape accompanying the rapid evolution of mobile computer vision.</p>
+
+<p style="text-align: center;"><img src="img/image4.png" alt="Alt text" /></p>
+
+<h2 id="industrial-applications">Industrial Applications</h2>
+
+<p><img src="img/IA.png" alt="AR Monocle" /><a href="#ref5">[5]</a></p>
+
+<ul>
+  <li>
+    <p>Computer vision applications: EfficientNet models have become very popular as pre-trained models for transfer learning in computer vision tasks like image classification, object detection, segmentation, and more. Their efficiency makes them well-suited for deployment in applications.</p>
+  </li>
+  <li>
+    <p>Mobile and embedded vision: Because EfficientNet models are smaller and computationally cheaper than previous state-of-the-art ConvNets like ResNet, they are very useful for deploying on mobile devices or embedded systems. This enables smart camera applications, drones, and mobile augmented reality systems.</p>
+  </li>
+  <li>
+    <p>Scalability to large datasets or number of classes: The scaling method used in EfficientNets allows them to scale up to larger datasets like ImageNet-21k (over 21,000 classes) while still maintaining greater efficiency than other models of similar performance. This makes them attractive for handling complex, large-scale vision tasks.</p>
+  </li>
+  <li>
+    <p>Model optimization and compression: EfficientNet’s techniques like depthwise convolutions and model scaling based on a compound coefficient make the models highly optimizable for techniques like model quantization or pruning. This further improves efficiency when deploying the models.</p>
+  </li>
+</ul>
+
+<h2 id="follow-on-research">Follow-on Research</h2>
+
+<p>Drawbacks of EfficientNet are mainly because of its training speed. Several points are raised to point out that EfficientNet could be more efficient.</p>
+
+<ul>
+  <li>Training with very large image sizes is slow: 
+As the model’s substantial memory usage requires smaller batch sizes to fit within the fixed GPU/TPU memory constraints, resulting in a significant slowdown during training.</li>
+  <li>Depthwise convolutions are slow in early layers but effective in later stages: Problem from extensive depthwise convolutions (Sifre, 2014).</li>
+  <li>Equally scaling up every stage is sub-optimal: Because EfficientNet equally scales up all stages using a simple compound scaling rule. For instance, when the depth coefficient is set to 2, every stage in the network doubles the number of layers, which may not be the most efficient approach.</li>
+</ul>
+
+<p>By finding the new way to search and scale the network could make EfficientNet be faster and efficient.</p>
+
+<h2 id="review-by-pichaya-saittagaroon">Review by Pichaya Saittagaroon</h2>
+<h3 id="overall">Overall:</h3>
+<p>8: Strong Accept. High-impact paper, with no major concerns with respect to evaluation, resources, reproducibility, or ethical considerations.</p>
+
+<h3 id="strengths-and-weaknesses">Strengths and Weaknesses:</h3>
+<ul>
+  <li>Originality: The idea of scaling law and network resource optimization is not novel. However, the proposed scaling law and network combination show interesting findings and achieve high accuracy and performance. The related works are cited adequately.</li>
+  <li>Quality: The experiment results are well supported with widely known benchmarks. The paper may need to provide more details on how the network is constructed. The author should also have mentioned the evaluation of their work.</li>
+  <li>Clarity: The paper was well written, stating the background of the problem with easy-to-understand language. Previous works were introduced well and were easy to follow.</li>
+  <li>Significance: The finding results were intriguing. The network achieved high accuracy in many datasets. It also introduces the concept of using the network’s width, depth, and resolution together to scale.</li>
+</ul>
+
+<h2 id="review-by-ashwin-sharan">Review by Ashwin Sharan</h2>
+<h3 id="overall-1">Overall:</h3>
+<p>Technically strong paper with, with novel ideas, excellent impact on the field of computer vision in terms of classification, with excellent evaluation, resources, and reproducibility, and no unaddressed ethical considerations. (Score 8/10)</p>
+
+<h3 id="strengths-and-weaknesses-1">Strengths and Weaknesses:</h3>
+<ul>
+  <li>Originality: The idea may not be completely novel as it tries to combine the findings of previous papers where scaling width, depth and resolution can help improve the model. But it is novel in its approach of combining all three to find a ratio that works best.</li>
+  <li>Quality: The results of the experiments are well explained and are reproducible, It has significant data showing the improvements in the model due to its approach.</li>
+  <li>Clarity: The mixed scaling approach is empirically motivated and there is no theoretical justification for the specific scaling factors used. But the paper provide significant exploration of different datasets</li>
+  <li>Significance: EfficientNet is significantly more efficient than previous models, using fewer parameters and FLOPs. It achieves state-of-the-art accuracy on several image classification benchmarks.</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<p>[0] Tan, M. and Le, Q. (2020.) EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks. https://arxiv.org/abs/1905.11946</p>
+
+<p>[1] APPM Department Colloquium - Mingxing Tan <a name="ref1">https://www.colorado.edu/amath/2021/02/26/appm-department-colloquium-mingxing-tan </a></p>
+
+<p>[2] Quoc V. Le <a name="ref2">https://cs.stanford.edu/~quocle/ </a></p>
+
+<p>[3] MnasNet: Towards Automating the Design of Mobile Machine Learning Models <a name="ref2">https://blog.research.google/2018/08/mnasnet-towards-automating-design-of.html</a></p>
+
+<p>[4] Wrapping Up CNN Models: Shifting Focus to Attention-Based Architectures https://blog.gopenai.com/wrapping-up-cnn-models-shifting-focus-to-attention-based-architectures-5029b87034d9</p>
+
+<p>[5] Image of AR monocle, https://i.redd.it/h4xwqzlwemo91.png</p>
+
+<h2 id="team-member">Team Member</h2>
+<ul>
+  <li>Ashwin Sharan</li>
+  <li>Pichaya Saittagaroon</li>
+</ul>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/pitch-r/efficientnet-final-project">efficientnet-final-project</a> is maintained by <a href="https://github.com/pitch-r">pitch-r</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
