@@ -8,7 +8,7 @@ layout: default
 
 EfficientNet is a convolutional neural network architecture designed to achieve state-of-the-art performance while minimizing computational resources. The paper introduces a compound scaling method to balance model depth, width, and resolution, enabling efficient scaling for convolution networks. By optimizing the trade-off between model size and accuracy, the network was constructed based on a mobile-size baseline while still achieving higher performance with significantly fewer parameters.
 
-!TODO
+EfficientNet marked a significant breakthrough in computer vision and deep learning as the model to attain state-of-the-art performance across various image classification benchmarks. It outperformed its predecessors in computational efficiency, amplifying its impact on the field. Since its introduction, EfficientNet has been widely adopted in numerous real-world applications.
 
 ## Literature Review
 
@@ -118,13 +118,13 @@ Mnasnet utilizes both model accuracy and latency as an objective function while 
 
 ### Neural Architecture Search for EfficientNets
 
-A similar approach to MnasNet has been used to create EfficientNet-B0. While MnasNet uses actual latency measured from a mobile device, as the network does not bound to one hardware, EfficientNet uses FLOPS instead. The pipeline does the same processes as MnasNet with an objective function to maximize $ACC(m) \times [FLOP(m)/T]^w$.
+A similar approach to MnasNet has been used to create EfficientNet-B0. While MnasNet uses actual latency measured from a mobile device, as the network does not bound to one hardware, EfficientNet uses FLOPS instead. The pipeline does the same processes as MnasNet with an objective function to maximize ACC(m) x [FLOP(m)/T]^w
 
 {:refdef: style="text-align: center;"}
 ![Alt text](img/image3.png)[[0]](#ref2)
 {: refdef}
 
-where $w,d,r$ are coefficients for scaling network width, depth, and resolution. $\hat{F}, \hat{L}, \hat{H},\hat{W} ,\hat{C}$ are predefined parameters in baseline network.
+where w,d,r are coefficients for scaling network width, depth, and resolution. F^, L^, H^, W^ and C^ are predefined parameters in baseline network.
 
 ## Scaling Efficient-B0 to get B1-B7
 Now that we undestand how the EfficientNet Architecture makes use of compound scaling and the NAS architecture, In this scetion we look at how the author scaled Efficient-B0 to get B1-B7.
